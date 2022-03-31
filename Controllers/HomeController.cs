@@ -25,7 +25,7 @@ namespace Mssion13.Controllers
                 .Include("Team")
                 .Where(b => b.Team.TeamName == teamName || teamName == null)
                 .ToList();
-          
+            ViewData["TeamName"] = teamName;
             return View(blah) ;
         }
         [HttpGet]
